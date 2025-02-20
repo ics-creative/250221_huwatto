@@ -1,0 +1,10 @@
+.basic {
+  opacity: 0;
+  translate: 0 15%;
+
+  &.isActive {
+    opacity: 1;
+    translate: 0;
+    transition: 1.4s;
+  }
+}

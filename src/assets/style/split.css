@@ -1,0 +1,31 @@
+.split {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-quad: cubic-bezier(0.11, 0, 0.5, 0);
+
+  .splitText .char {
+    opacity: 0;
+    translate: 0 100%;
+  }
+
+  &.isActive {
+    .headline .char {
+      --delay: 0.05s;
+
+      opacity: 1;
+      translate: 0;
+      transition:
+        opacity 0.7s var(--ease-in-quad) calc(var(--delay) * var(--index)),
+        translate 1.4s var(--ease-out-quart) calc(var(--delay) * var(--index));
+    }
+
+    .description .char {
+      --delay: 0.003s;
+
+      opacity: 1;
+      translate: 0;
+      transition:
+        opacity 0.5s var(--ease-in-quad) calc(var(--delay) * var(--index) + 0.23s),
+        translate 1.3s var(--ease-out-quart) calc(var(--delay) * var(--index) + 0.23s);
+    }
+  }
+}

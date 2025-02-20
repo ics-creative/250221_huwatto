@@ -1,0 +1,26 @@
+{
+  "name": "huwatto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prettier": "prettier \"**/*.{css,scss,ts,js,html}\" --write",
+    "stylelint": "stylelint --fix src/assets/style/*.css",
+    "format": "pnpm run prettier && pnpm run stylelint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "16.4.7",
+    "glob": "11.0.1",
+    "prettier": "3.5.0",
+    "stylelint": "16.14.1",
+    "stylelint-config-recess-order": "6.0.0",
+    "stylelint-config-standard": "37.0.0",
+    "vite": "6.1.0"
+  }
+}

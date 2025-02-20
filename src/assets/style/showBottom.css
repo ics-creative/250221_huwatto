@@ -1,0 +1,34 @@
+.showBottom {
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+
+  .char {
+    transform-origin: 50% 100%;
+    translate: 0 100%;
+  }
+
+  .headline,
+  .description > span {
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  &.isActive {
+    .headline .char {
+      --delay: 0.02s;
+
+      translate: 0;
+
+      /* indexの2乗の遅延時間とすることで段々と出現が遅くなる */
+      transition: translate 1s var(--ease-out-quart)
+        calc((var(--delay) * var(--index) * var(--index)));
+    }
+
+    .description .char {
+      --delay: 0.004s;
+
+      translate: 0;
+      transition: translate 1s var(--ease-out-quart)
+        calc(var(--delay) * var(--index) * var(--index) * 0.01);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>フワッと出てくる表現を極める</title>
+    <script type="module" src="/assets/style/style.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module">
+      import { setupAdvancedScrollTrigger } from "/assets/script/scrollTrigger.js";
+      import { splitText, splitTextDoubleSpan } from "/assets/script/splitText.js";
+      import { resetAnimation } from "/assets/script/resetAnimation.js";
+      const target = document.querySelector(".scrollTrigger");
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setupAdvancedScrollTrigger(target);
+      });
+
+      splitText(".splitText");
+      splitTextDoubleSpan(".splitTextDoubleSpan");
+
+      const resetButton = document.querySelector(".resetButton");
+      resetButton.addEventListener("click", () => {
+        resetAnimation();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="imageAndHeadline">
+        <picture class="image">
+          <source srcset="/assets/images/image.avif" type="image/avif" />
+          <source srcset="/assets/images/image.jpg" type="image/jpg" />
+          <img
+            src="/assets/images/image.jpg"
+            alt="1杯のコーヒーと小さなケーキ"
+            width="480"
+            height="480"
+          />
+        </picture>
+        <div class="text">
+          <div class="showBottom scrollTrigger">
+            <h2 class="headline splitText">贅沢なひとときを</h2>
+            <p class="description splitTextDoubleSpan">
+              ゆったりと流れる時間の中で、香り高いコーヒーとともに心を満たすひとときをお過ごしください。こだわりの豆を丁寧に淹れた一杯と、焼きたてのスイーツが織りなす極上の味わい。落ち着いた空間で、大切な人との会話を楽しむもよし、一人で静かに読書にふけるもよし。日常の喧騒を忘れ、心からリラックスできるひとときをお届けします。
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="resetButton">リセット</button>
+    </div>
+  </body>
+</html>
