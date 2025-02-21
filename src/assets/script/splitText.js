@@ -6,7 +6,6 @@ const segmenterJa = new Intl.Segmenter("ja", { granularity: "grapheme" });
 export const splitText = (selector) => {
   document.querySelectorAll(selector).forEach((element) => {
     const text = element.textContent.trim();
-    console.log(text);
     const graphemeSegments = segmenterJa.segment(text);
     element.innerHTML = ""; // 元のテキストをクリア
     Array.from(graphemeSegments).forEach(({ segment }, index) => {
