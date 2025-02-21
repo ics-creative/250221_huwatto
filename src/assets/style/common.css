@@ -8,6 +8,8 @@ body {
   padding-top: 48px;
   font-family: "Shippori Mincho", serif;
   background-color: #494039;
+
+  --base: 640px;
 }
 
 .container {
@@ -16,7 +18,6 @@ body {
   min-height: 200vh;
   padding-top: 70vh;
   margin: 0 auto;
-  container-type: inline-size;
 }
 
 .imageAndHeadline {
@@ -25,7 +26,7 @@ body {
 
 .image {
   display: block;
-  width: 60cqw;
+  width: 60%;
   max-width: 480px;
   height: auto;
 
@@ -39,7 +40,7 @@ body {
   position: absolute;
   top: 15%;
   left: 45%;
-  width: 50cqw;
+  width: calc(var(--base) * 0.5);
 }
 
 .hidden {
@@ -48,7 +49,7 @@ body {
 
 .headline {
   margin-bottom: 0.7em;
-  font-size: 5.8cqw;
+  font-size: calc(var(--base) * 5.8 / 100);
   font-weight: normal;
   line-height: 1;
   color: #fff;
@@ -57,7 +58,7 @@ body {
 
 .description {
   width: 90%;
-  font-size: 1.8cqw;
+  font-size: calc(var(--base) * 1.8 / 100);
   line-height: 1.7;
   color: #fff;
   letter-spacing: 0.05em;
@@ -68,11 +69,15 @@ body {
   grid-template-columns: 50% 50%;
   max-width: 640px;
   margin: 0 auto;
+
+  .container {
+    --base: 320px;
+  }
 }
 
 .compareTitle {
   position: relative;
-  top: -20cqw;
+  top: calc(var(--base) * -20 / 100);
   height: 0;
   font-size: 20px;
   color: #fff;
