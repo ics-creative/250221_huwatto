@@ -8,7 +8,9 @@
   &.isActive {
     opacity: 1;
     translate: 0;
+    transition-timing-function:
+      opacity var(--ease-out-cubic),
+      translate var(--ease-out-quint);
     transition-duration: 1.8s;
-    transition-timing-function: opacity var(--ease-out-cubic), translate var(--ease-out-quint);
   }
 }
