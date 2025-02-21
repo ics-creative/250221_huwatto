@@ -17,6 +17,7 @@ body {
   padding-top: 70vh;
   margin: 0 auto;
   container-type: inline-size;
+  padding-bottom: 40px;
 }
 
 .imageAndHeadline {
