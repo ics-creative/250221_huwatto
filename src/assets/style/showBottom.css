@@ -19,8 +19,7 @@
       translate: 0;
 
       /* indexの2乗の遅延時間とすることで段々と出現が遅くなる */
-      transition: translate 1s var(--ease-out-quart)
-        calc((var(--delay) * var(--index) * var(--index)));
+      transition: translate 1s var(--ease-out-quart) calc((var(--delay) * pow(var(--index), 2)));
     }
 
     .description .char {
@@ -28,7 +27,7 @@
 
       translate: 0;
       transition: translate 1s var(--ease-out-quart)
-        calc(var(--delay) * var(--index) * var(--index) * 0.01);
+        calc(var(--delay) * pow(var(--index), 2) * 0.01);
     }
   }
 }

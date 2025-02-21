@@ -5,6 +5,7 @@
   &.isActive {
     opacity: 1;
     translate: 0;
-    transition: 1.4s;
+    transition-duration: 1.4s;
+    transition-timing-function: linear;
   }
 }
