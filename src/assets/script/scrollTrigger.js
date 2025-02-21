@@ -1,7 +1,7 @@
 /**
  * IntersectionObserverを初期化する
- * @param target
- * @param options
+ * @param target {HTMLElement} 監視対象の要素
+ * @param options {IntersectionObserverInit} IntersectionObserverオプション
  */
 const setupIntersectionObserver = (target, options) => {
   const callback = (entries, observer) => {
@@ -21,9 +21,9 @@ const setupIntersectionObserver = (target, options) => {
 
 /**
  * 画面中央で発火するスクロールトリガー
- * @param target
+ * @param target {HTMLElement} トリガーしたい要素
  */
-export const setupBasicScrollTrigger = (target) => {
+export const setupBasic = (target) => {
   const options = {
     root: null,
     rootMargin: "-50% 0px",
@@ -34,9 +34,9 @@ export const setupBasicScrollTrigger = (target) => {
 
 /**
  * 画面下部で発火するスクロールトリガー
- * @param target
+ * @param target {HTMLElement} トリガーしたい要素
  */
-export const setupAdvancedScrollTrigger = (target) => {
+export const setupAdvanced = (target) => {
   const options = {
     root: null,
     rootMargin: "-80% 0px -20%",

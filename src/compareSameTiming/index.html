@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>フワッと出てくる表現を極める</title>
     <script type="module" src="/assets/style/style.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
       rel="stylesheet"
     />
     <script type="module">
-      import { setupAdvancedScrollTrigger } from "/assets/script/scrollTrigger.js";
+      import { setupAdvanced } from "/assets/script/scrollTrigger.js";
       import { resetAnimation } from "/assets/script/resetAnimation.js";
       const target1 = document.querySelector(".scrollTriggerBasic");
       const target2 = document.querySelector(".scrollTriggerAdvanced");
 
       document.addEventListener("DOMContentLoaded", () => {
-        setupAdvancedScrollTrigger(target1);
-        setupAdvancedScrollTrigger(target2);
+        setupAdvanced(target1);
+        setupAdvanced(target2);
       });
 
       const resetButton = document.querySelector(".resetButton");

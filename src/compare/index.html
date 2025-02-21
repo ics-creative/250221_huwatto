@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>フワッと出てくる表現を極める</title>
     <script type="module" src="/assets/style/style.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
       rel="stylesheet"
     />
     <script type="module">
-      import {
-        setupBasicScrollTrigger,
-        setupAdvancedScrollTrigger,
-      } from "/assets/script/scrollTrigger.js";
+      import { setupBasic, setupAdvanced } from "/assets/script/scrollTrigger.js";
       import { resetAnimation } from "/assets/script/resetAnimation.js";
       const target1 = document.querySelector(".scrollTriggerBasic");
       const target2 = document.querySelector(".scrollTriggerAdvanced");
 
       document.addEventListener("DOMContentLoaded", () => {
-        setupBasicScrollTrigger(target1);
-        setupAdvancedScrollTrigger(target2);
+        setupBasic(target1);
+        setupAdvanced(target2);
       });
 
       const resetButton = document.querySelector(".resetButton");
@@ -34,6 +30,7 @@
   <body>
     <div class="divide">
       <div class="container">
+        <p class="compareTitle">ちょっと微妙なもの</p>
         <div class="imageAndHeadline">
           <picture class="image">
             <source srcset="/assets/images/image.avif" type="image/avif" />
@@ -57,6 +54,7 @@
         <button class="resetButton">リセット</button>
       </div>
       <div class="container">
+        <p class="compareTitle">改良したもの</p>
         <div class="imageAndHeadline">
           <picture class="image">
             <source srcset="/assets/images/image.avif" type="image/avif" />

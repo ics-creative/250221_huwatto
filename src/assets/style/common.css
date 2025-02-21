@@ -70,6 +70,14 @@ body {
   margin: 0 auto;
 }
 
+.compareTitle {
+  position: relative;
+  top: -20cqw;
+  height: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
 .resetButton {
   padding: 6px 16px;
   margin-top: 48px;

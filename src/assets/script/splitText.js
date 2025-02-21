@@ -1,7 +1,7 @@
 const segmenterJa = new Intl.Segmenter("ja", { granularity: "grapheme" });
 /**
  * 文字を個別に分解してindexをふったうえでspanタグで囲みます
- * @param selector
+ * @param selector {string}
  */
 export const splitText = (selector) => {
   document.querySelectorAll(selector).forEach((element) => {
@@ -21,7 +21,7 @@ export const splitText = (selector) => {
 
 /**
  * 文字を個別に分解してindexをふったうえでspanタグを2重に囲みます
- * @param selector
+ * @param selector {string} querySelectorによる要素指定
  */
 export const splitTextDoubleSpan = (selector) => {
   document.querySelectorAll(selector).forEach((element) => {
