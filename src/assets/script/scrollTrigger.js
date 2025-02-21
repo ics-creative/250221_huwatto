@@ -25,7 +25,7 @@ const setupIntersectionObserver = (target, options) => {
  */
 export const setupBasic = (target) => {
   const options = {
-    root: null,
+    root: document,
     rootMargin: "-50% 0px",
     threshold: 0,
   };
@@ -38,7 +38,7 @@ export const setupBasic = (target) => {
  */
 export const setupAdvanced = (target) => {
   const options = {
-    root: null,
+    root: document,
     rootMargin: "-80% 0px -20%",
     threshold: 0,
   };
